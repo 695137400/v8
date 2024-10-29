@@ -231,13 +231,19 @@ TEST_F(MarkingVerifierDeathTest, DieWithDebugInfoOnUnexpectedLiveByteCount) {
       "\nMarked bytes: expected " +
       std::to_string(expected) + " vs. verifier found " +
       std::to_string(allocated) + ",.*";
+#ifdef CPPGC_SUPPORTS_OBJECT_NAMES
+  std::string class_name = "cppgc::internal::(anonymous namespace)::GCed";
+#else
+  std::string class_name = "InternalNode";
+#endif
   std::string regex_page =
       "\nNormal page in space \\d+:"
       "\nMarked bytes: expected 0 vs. verifier found " +
       std::to_string(allocated) +
       ",.*"
-      "\n- InternalNode at .*, size " +
-      std::to_string(header.ObjectSize()) + ", marked\n";
+      "\n- " +
+      class_name + " at .*, size " + std::to_string(header.ObjectSize()) +
+      ", marked\n";
   EXPECT_DEATH_IF_SUPPORTED(
       VerifyMarking(Heap::From(GetHeap())->AsBase(),
                     StackState::kNoHeapPointers, expected),
