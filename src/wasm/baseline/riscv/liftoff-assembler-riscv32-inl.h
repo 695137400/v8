@@ -274,7 +274,7 @@ void LiftoffAssembler::StoreTaggedPointer(Register dst_addr,
     dst_op = MemOperand(kScratchReg, 0);
   }
   auto trapper = [protected_store_pc](int offset) {
-    if (protected_store_pc) *protected_store_pc = static_cast<uint32_t>(offset)
+    if (protected_store_pc) *protected_store_pc = static_cast<uint32_t>(offset);
   };
   StoreWord(src, dst_op, trapper);
   if (protected_store_pc) {
