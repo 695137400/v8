@@ -16,6 +16,29 @@
       "message": "Unfortunately, the test broke the standalone cppgc bot which uses object names:\nhttps://ci.chromium.org/ui/p/v8/builders/ci/V8%20Linux64%20-%20cppgc-non-default%20-%20debug/15910/overview",
       "revId": "47706225b82e36583fd5fe85c236c80f30133987",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f567d88e_66d7a73e",
+        "filename": "test/unittests/heap/cppgc/marking-verifier-unittest.cc",
+        "patchSetId": 3
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 1356087
+      },
+      "writtenOn": "2024-10-29T12:18:33Z",
+      "side": 1,
+      "message": "Can you use the name from the GCInfo instead?",
+      "range": {
+        "startLine": 235,
+        "startChar": 14,
+        "endLine": 235,
+        "endChar": 24
+      },
+      "revId": "47706225b82e36583fd5fe85c236c80f30133987",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }
