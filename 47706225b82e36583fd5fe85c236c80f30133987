@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8411b33f_e6367cde",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1147189
+      },
+      "writtenOn": "2024-10-29T12:09:45Z",
+      "side": 1,
+      "message": "Unfortunately, the test broke the standalone cppgc bot which uses object names:\nhttps://ci.chromium.org/ui/p/v8/builders/ci/V8%20Linux64%20-%20cppgc-non-default%20-%20debug/15910/overview",
+      "revId": "47706225b82e36583fd5fe85c236c80f30133987",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}
